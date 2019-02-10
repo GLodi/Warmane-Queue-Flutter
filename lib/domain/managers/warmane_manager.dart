@@ -7,7 +7,7 @@ class WarmaneManager {
 
   WarmaneManager(this._webHelper);
 
-  Observable<String> getStatus() =>
+  Observable<WarmaneData> getStatus() =>
       Observable.fromFuture(_webHelper.getStatus())
           .handleError((e) => throw e);
 }

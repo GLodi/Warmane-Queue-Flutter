@@ -1,22 +1,25 @@
 import 'package:flutter/foundation.dart';
 
+import 'package:warmane_queue_checker_flutter/data/data.dart';
 import 'package:warmane_queue_checker_flutter/domain/bloc_utils/bloc_event_state.dart';
 
 class WarmaneState extends BlocState {
-  final String message;
   final WarmaneStateType type;
+  final String message;
+  final WarmaneData data;
 
   WarmaneState({
     @required this.type,
     this.message,
+    this.data,
   });
 
   factory WarmaneState.notInit() =>
       WarmaneState(type: WarmaneStateType.notInit);
 
-  factory WarmaneState.init(String message) =>
+  factory WarmaneState.init(WarmaneData data) =>
       WarmaneState(type: WarmaneStateType.init,
-        message: message);
+        data: data);
 
   factory WarmaneState.error(String error) =>
       WarmaneState(type: WarmaneStateType.error,

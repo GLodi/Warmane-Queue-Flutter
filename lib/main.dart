@@ -7,7 +7,6 @@ import 'package:warmane_queue_checker_flutter/data/data.dart';
 import 'package:warmane_queue_checker_flutter/presentation/home_screen.dart';
 
 void main() {
-  SystemChrome.setEnabledSystemUIOverlays([]);
   kiwi.Container container = new kiwi.Container();
   container.registerSingleton((c) =>
     new NetUtils());
@@ -25,6 +24,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData.dark(),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: BlocProvider(

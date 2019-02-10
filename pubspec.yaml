@@ -71,3 +71,10 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.io/custom-fonts/#from-packages
+
+  assets:
+    - assets/
+  fonts:
+  - family: Futura Book Regular
+    fonts:
+      - asset: assets/Futura Book Regular.otf
