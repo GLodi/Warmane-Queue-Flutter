@@ -38,15 +38,15 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Text(
                   state.message,
                   style: new TextStyle(
-                    color: Theme.of(context).hintColor,
-                    fontFamily: "Roboto",
+                    color: Color.fromRGBO(126, 140, 29, 100),
+                    fontFamily: "Futura Book Regular",
                     fontSize: 20.0,
                   ),
                 ),
               );
             }
             case WarmaneStateType.init : {
-              return initScreen(state);
+              return Center(child: initScreen(state));
             }
           }
         },
@@ -65,7 +65,9 @@ class _HomeScreenState extends State<HomeScreen> {
           title: Text(
             servers[index] + " " + state.data.players[index].toString(),
             style: new TextStyle(
-              color: Theme.of(context).hintColor,
+              color: state.data.q[index] == null ?
+                Color.fromRGBO(126, 140, 29, 100) : 
+                Color.fromRGBO(214, 149, 35, 100),
               fontFamily: "Futura Book Regular",
               fontSize: 20.0,
             ),
@@ -75,7 +77,7 @@ class _HomeScreenState extends State<HomeScreen> {
           title: Text(
             "Total players online: " + state.data.total.toString(),
             style: new TextStyle(
-              color: Theme.of(context).hintColor,
+              color: Color.fromRGBO(126, 140, 29, 100),
               fontFamily: "Futura Book Regular",
               fontSize: 20.0,
             ),
