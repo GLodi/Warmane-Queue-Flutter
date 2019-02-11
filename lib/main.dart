@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:kiwi/kiwi.dart' as kiwi;
 
 import 'package:warmane_queue_checker_flutter/domain/domain.dart';
