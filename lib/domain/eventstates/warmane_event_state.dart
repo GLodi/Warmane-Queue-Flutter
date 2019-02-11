@@ -42,5 +42,5 @@ class WarmaneEvent extends BlocEvent {
 
 enum WarmaneEventType {
   start,
-  refresh
+  refresh,
 }

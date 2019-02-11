@@ -60,44 +60,46 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget initScreen(WarmaneState state) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 80, horizontal: 20),
+      padding: EdgeInsets.only(top: 80, left: 20, right: 20),
       child: Column(
         children: <Widget>[
           Image.asset("assets/warmane.png"),
           Flexible(
             child: ListView.builder(
+              padding: EdgeInsets.only(top: 20),
               itemCount: 6,
               itemBuilder: (context, index) {
-                return index != 5 ? ListTile(
-                  leading:
-                  index != 0 && index != 4 ? Image.asset('assets/wotlk.png') : (
-                      index == 0 ? Image.asset('assets/tbc.png') : Image.asset('assets/mop.png')),
-                  title: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: <Widget>[
-                      Text(
-                        servers[index],
-                        style: new TextStyle(
-                          color: state.data.q[index] == null ?
-                          Color.fromRGBO(126, 140, 29, 100) :
-                          Color.fromRGBO(214, 149, 35, 100),
-                          fontFamily: "Futura Book Regular",
-                          fontSize: 20.0,
+                return index != 5 ?
+                  Padding(
+                    padding: EdgeInsets.symmetric(vertical: 10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: <Widget>[
+                        index != 0 && index != 4 ? Image.asset('assets/wotlk.png') : (
+                            index == 0 ? Image.asset('assets/tbc.png') : Image.asset('assets/mop.png')),
+                        Text(
+                          servers[index],
+                          style: new TextStyle(
+                            color: state.data.q[index] == null ?
+                            Color.fromRGBO(126, 140, 29, 100) :
+                            Color.fromRGBO(214, 149, 35, 100),
+                            fontFamily: "Futura Book Regular",
+                            fontSize: 20.0,
+                          ),
                         ),
-                      ),
-                      Text(
-                        state.data.players[index].toString(),
-                        style: new TextStyle(
-                          color: state.data.q[index] == null ?
-                          Color.fromRGBO(126, 140, 29, 100) :
-                          Color.fromRGBO(214, 149, 35, 100),
-                          fontFamily: "Futura Book Regular",
-                          fontSize: 20.0,
+                        Text(
+                          state.data.players[index].toString(),
+                          style: new TextStyle(
+                            color: state.data.q[index] == null ?
+                            Color.fromRGBO(126, 140, 29, 100) :
+                            Color.fromRGBO(214, 149, 35, 100),
+                            fontFamily: "Futura Book Regular",
+                            fontSize: 20.0,
+                          ),
                         ),
-                      ),
-                    ],
-                  ),
-                ) :
+                      ],
+                    ),
+                  ) :
                 Padding(
                   padding: EdgeInsets.symmetric(vertical: 40),
                   child: Center(
