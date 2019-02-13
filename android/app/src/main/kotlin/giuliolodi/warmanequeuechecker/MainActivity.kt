@@ -1,4 +1,4 @@
-package giuliolodi.warmanequeuecheckerflutter
+package giuliolodi.warmanequeuechecker
 
 import android.os.Bundle
 

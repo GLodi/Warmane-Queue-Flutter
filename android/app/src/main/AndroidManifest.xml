@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="giuliolodi.warmanequeuecheckerflutter">
+    package="giuliolodi.warmanequeuechecker">
 
     <!-- The INTERNET permission is required for development. Specifically,
          flutter needs it to communicate with the running application
@@ -14,8 +14,8 @@
          FlutterApplication and put your custom class here. -->
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="warmane_queue_checker_flutter"
-        android:icon="@mipmap/ic_launcher">
+        android:label="Warmane Queue Checker"
+        android:icon="@mipmap/warmane2">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
