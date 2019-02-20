@@ -1,16 +1,13 @@
-# warmane_queue_checker_flutter
+# Warmane Queue Flutter
 
-Warmane Queue Checker
+A Flutter app that parses Warmane's website and extracts queues' information.
 
-## Getting Started
+It implements a version of BLoC that I've learned from Didier Boelens:
+https://www.didierboelens.com/2018/12/reactive-programming---streams---bloc---practical-use-cases/
 
-This project is a starting point for a Flutter application.
+The main difference from a regular BLoC approach is that it implements 
+Event-States in order to manage a screen's state. 
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+I've also used kiwi to generate all dependencies (not really a 
+dependency injection system, as Flutter doesn't have a straightforward 
+solution for it yet).
